@@ -4,7 +4,7 @@ Supplementary videos for the submission.
 
 Open `index.html` for the side-by-side video page. Each video shows four methods from left to right:
 
-| Original | TeaCache | EasyCache | Ours |
+| Original | TeaCache | EasyCache | Ours CtrlCache |
 |:---:|:---:|:---:|:---:|
 
 For each video, all methods use the same initial frame, prompt, control sequence, and seed.
