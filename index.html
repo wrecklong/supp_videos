@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CtrlCache Supplementary Videos</title>
+<style>
+  :root {
+    --bg:#f6f6f4; --card:#ffffff; --fg:#1c1c1e; --muted:#6b6b70; --line:#e4e4e0;
+    --accent:#b4461a; --accent-soft:#fbeee7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#121214; --card:#1b1b1e; --fg:#ececef; --muted:#9c9ca3; --line:#2c2c30;
+      --accent:#f08a5d; --accent-soft:#3a2219;
+    }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:64px; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1440px; margin:0 auto; padding:0 16px; }
+
+  header { padding:56px 0 28px; text-align:center; }
+  .eyebrow { font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
+  h1 { font-size:clamp(1.4rem, 2.6vw, 2rem); line-height:1.25; margin:0 auto 14px; max-width:900px; font-weight:700; }
+  .desc { color:var(--muted); max-width:760px; margin:0 auto 20px; }
+  .legend { display:inline-flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+  .legend span { font-size:.85rem; font-weight:600; padding:4px 12px; border:1px solid var(--line);
+                  border-radius:999px; background:var(--card); }
+  .legend span.ours, .labels span.ours { color:var(--accent); background:var(--accent-soft); border-color:transparent; }
+
+  nav { position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 88%, transparent);
+         backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  nav .wrap { display:flex; justify-content:center; gap:4px; padding-top:10px; padding-bottom:10px; overflow-x:auto; }
+  nav a { white-space:nowrap; color:var(--muted); text-decoration:none; font-size:.9rem; font-weight:600;
+           padding:6px 14px; border-radius:8px; transition:background .15s, color .15s; }
+  nav a:hover { color:var(--fg); }
+  nav a.active { color:var(--fg); background:var(--card); box-shadow:0 0 0 1px var(--line); }
+
+  section { padding-top:36px; }
+  h2 { font-size:1.25rem; margin:0 0 16px; display:flex; align-items:baseline; gap:10px; }
+  .count { font-size:.85rem; font-weight:500; color:var(--muted); }
+
+  .card { margin:0 0 20px; padding:14px 14px 12px; background:var(--card); border:1px solid var(--line);
+           border-radius:12px; }
+  figcaption { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+                margin:0 2px 10px; }
+  .num { font-weight:700; }
+  .ref { font-size:.85rem; color:var(--muted); }
+  .labels { display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; margin-bottom:6px; }
+  .labels span { text-align:center; font-size:.82rem; font-weight:600; color:var(--muted);
+                  padding:3px 0; border-radius:6px; }
+  video { display:block; width:100%; height:auto; background:#000; border-radius:6px; }
+
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:32px 0 48px; }
+  @media (max-width:640px) {
+    header { padding-top:36px; }
+    .labels span { font-size:.7rem; }
+    .card { padding:10px; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="eyebrow">Supplementary Videos</p>
+  <h1>CtrlCache: Control-Aware Caching for Interactive Video World Models</h1>
+  <p class="desc">Each video compares four methods side by side. All methods share the same initial frame,
+  prompt, control sequence, and seed. Frames shown in the paper are sampled from these videos.</p>
+  <div class="legend"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+</header>
+<nav><div class="wrap"><a href="#lingbot-world-v2">LingBot-World v2</a><a href="#mg2">Matrix-Game 2.0</a></div></nav>
+<main class="wrap">
+  <section id="lingbot-world-v2">
+    <h2>LingBot-World v2 <span class="count">5 videos</span></h2>
+    <figure class="card">
+      <figcaption><span class="num">Video 1</span><span class="ref">Main paper · Figure 4</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/lingbot-world-v2/case_149.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 2</span><span class="ref">Appendix · Qualitative Examples, block 1</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/lingbot-world-v2/case_30.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 3</span><span class="ref">Appendix · Qualitative Examples, block 2</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/lingbot-world-v2/case_24.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 4</span><span class="ref">Appendix · Qualitative Examples, block 3</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/lingbot-world-v2/case_173.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 5</span><span class="ref">Appendix · Qualitative Examples, block 4</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/lingbot-world-v2/case_143.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+  </section>
+  <section id="mg2">
+    <h2>Matrix-Game 2.0 <span class="count">5 videos</span></h2>
+    <figure class="card">
+      <figcaption><span class="num">Video 1</span><span class="ref">Main paper · Figure 4</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/mg2/case_95.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 2</span><span class="ref">Appendix · Qualitative Examples, block 1</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/mg2/case_163.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 3</span><span class="ref">Appendix · Qualitative Examples, block 2</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/mg2/case_172.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 4</span><span class="ref">Appendix · Qualitative Examples, block 3</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/mg2/case_175.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+    <figure class="card">
+      <figcaption><span class="num">Video 5</span><span class="ref">Appendix · Qualitative Examples, block 4</span></figcaption>
+      <div class="labels"><span>Original</span><span>TeaCache</span><span>EasyCache</span><span class="ours">Ours</span></div>
+      <video src="videos/mg2/case_166.mp4" muted loop playsinline controls preload="metadata"></video>
+    </figure>
+  </section>
+</main>
+<footer class="wrap">Anonymous submission</footer>
+<script>
+  // Play only videos in view to limit bandwidth.
+  const io = new IntersectionObserver(entries => {
+    for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
+  }, { threshold: 0.25 });
+  document.querySelectorAll("video").forEach(v => io.observe(v));
+
+  // Highlight the nav entry of the section in view.
+  const links = [...document.querySelectorAll("nav a")];
+  const so = new IntersectionObserver(entries => {
+    for (const e of entries) if (e.isIntersecting)
+      links.forEach(a => a.classList.toggle("active", a.hash === "#" + e.target.id));
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  document.querySelectorAll("section").forEach(s => so.observe(s));
+</script>
+</body>
+</html>
