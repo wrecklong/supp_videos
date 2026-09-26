@@ -1,10 +1,10 @@
-# CtrlCache: Control-Aware Caching for Interactive Video World Models
+# CtrlCache: Accelerating Interactive Video World Models with Control-Aware Caching
 
 Supplementary videos for the submission.
 
 Open `index.html` for the side-by-side video page. Each video shows four methods from left to right:
 
-| Original | TeaCache | EasyCache | Ours CtrlCache |
+| Original | TeaCache | EasyCache | Our CtrlCache |
 |:---:|:---:|:---:|:---:|
 
 For each video, all methods use the same initial frame, prompt, control sequence, and seed.
